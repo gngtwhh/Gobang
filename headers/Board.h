@@ -21,17 +21,17 @@ public:
     void move_coord(int direction);
     void move_coord(int x, int y);
 
-    bool move_in_board(int who);//è¿”å›å€¼ç”¨äºåˆ¤æ–­æ˜¯å¦æ­£ç¡®è½å­---ç©å®¶é€‰æ‹©è½å­çš„åœ°æ–¹å¯èƒ½å·²æœ‰æ£‹å­
-    std::pair<int,int> last_position();//è¿”å›æœ€åä¸€æ¬¡è½å­çš„åæ ‡
+    bool move_in_board(int who);//·µ»ØÖµÓÃÓÚÅĞ¶ÏÊÇ·ñÕıÈ·Âä×Ó---Íæ¼ÒÑ¡ÔñÂä×ÓµÄµØ·½¿ÉÄÜÒÑÓĞÆå×Ó
+    std::pair<int,int> last_position();//·µ»Ø×îºóÒ»´ÎÂä×ÓµÄ×ø±ê
 
-    std::string piece[2]={"â—","â—‹"};//é»‘å…ˆç™½å
+    std::string piece[2]={"¡ñ","¡ğ"};//ºÚÏÈ°×ºó
     int maxcoord_x = 14 * 4;
     int maxcoord_y = 14 * 2;
 private:
     void print_cursor();
     void clear_cursor();
-    std::map<char, int> coords;//å½“å‰çš„åæ ‡
-    int record[15][15] = {-1};//æ³¨æ„,ä¸¤ä¸ªç»´åº¦ä¸è·Ÿéšç³»ç»Ÿæ§åˆ¶å°å…‰æ ‡,éœ€è¦è°ƒæ¢
-    const char *corners[4] = {"â”", "â”“", "â”—", "â”›"};//å·¦ä¸Š,å³ä¸Š,å·¦ä¸‹,å³ä¸‹
+    std::map<char, int> coords;//µ±Ç°µÄ×ø±ê
+    int record[15][15] = {-1};//×¢Òâ,Á½¸öÎ¬¶È²»¸úËæÏµÍ³¿ØÖÆÌ¨¹â±ê,ĞèÒªµ÷»»
+    const char *corners[4] = {"©³", "©·", "©»", "©¿"};//×óÉÏ,ÓÒÉÏ,×óÏÂ,ÓÒÏÂ
 };
 #endif //gomoku_BOARD_H

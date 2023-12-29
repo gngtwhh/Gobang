@@ -6,7 +6,7 @@
 #include "Player.h"
 #include "Board.h"
 
-//å…¶ä»–æ¸¸æˆæ•°æ®éƒ½å­˜å‚¨åœ¨GameControlçš„ä¸€ä¸ªå®ä¾‹åŒ–å¯¹è±¡ä¸­
+//ÆäËûÓÎÏ·Êı¾İ¶¼´æ´¢ÔÚGameControlµÄÒ»¸öÊµÀı»¯¶ÔÏóÖĞ
 class GameControl {
 public:
     GameControl(std::shared_ptr<Player> p1, std::shared_ptr<Player> p2, std::shared_ptr<Board> b) :

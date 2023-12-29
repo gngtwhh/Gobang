@@ -8,11 +8,11 @@ bool Referee::judge(Board &board, int who) {
             {1, 0},
             {1, 1},
             {1, -1}
-    };//ä»¥å‘å³/å‘ä¸‹/å‰¯å¯¹è§’çº¿å‘å·¦ä¸‹ä¸ºåŸºæœ¬æ­£æ–¹å‘,[4]:æ¨ª,ç«–,ä¸»å¯¹è§’çº¿,å‰¯å¯¹è§’çº¿
+    };//ÒÔÏòÓÒ/ÏòÏÂ/¸±¶Ô½ÇÏßÏò×óÏÂÎª»ù±¾Õı·½Ïò,[4]:ºá,Êú,Ö÷¶Ô½ÇÏß,¸±¶Ô½ÇÏß
     std::pair<int, int> pre_coord = board.last_position();
     std::pair<int, int> temp_coord;
     for (auto line: move) {
-        int sum = -1;//-1ç”¨äºè§£å†³ä¸­é—´ç‚¹é‡å¤è®¡ç®—çš„é—®é¢˜
+        int sum = -1;//-1ÓÃÓÚ½â¾öÖĞ¼äµãÖØ¸´¼ÆËãµÄÎÊÌâ
         temp_coord = pre_coord;
         while (board.record[temp_coord.first][temp_coord.second] == who
                && temp_coord.first >= 0 && temp_coord.first <= 14
@@ -29,7 +29,7 @@ bool Referee::judge(Board &board, int who) {
             temp_coord.first -= line[0];
             temp_coord.second -= line[1];
         }
-        if (sum == 5) return true;//äº”å­è¿ç ,æ¸¸æˆç»“æŸ
+        if (sum == 5) return true;//Îå×ÓÁ¬Öé,ÓÎÏ·½áÊø
     }
-    return false;//æ¯ä¸€ä¸ªæ–¹å‘éƒ½æ²¡æœ‰äº”å­è¿ç ,æ¸¸æˆç»§ç»­
+    return false;//Ã¿Ò»¸ö·½Ïò¶¼Ã»ÓĞÎå×ÓÁ¬Öé,ÓÎÏ·¼ÌĞø
 }

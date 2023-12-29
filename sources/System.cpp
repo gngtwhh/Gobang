@@ -5,27 +5,27 @@
 
 using namespace std;
 
-//æ¶‰åŠåˆ°windowsçš„API
-//æ›´æ”¹æ–‡å­—é¢œè‰²
+//Éæ¼°µ½windowsµÄAPI
+//¸ü¸ÄÎÄ×ÖÑÕÉ«
 void System::color(int i) {
-    //SetConsoleTextAttributeæ˜¯APIè®¾ç½®æ§åˆ¶å°çª—å£å­—ä½“é¢œè‰²å’ŒèƒŒæ™¯è‰²çš„å‡½æ•°
+    //SetConsoleTextAttributeÊÇAPIÉèÖÃ¿ØÖÆÌ¨´°¿Ú×ÖÌåÑÕÉ«ºÍ±³¾°É«µÄº¯Êı
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), i);
 }
 
 void System::gotoxy(int x, int y) {
     COORD c;
     static HANDLE h;
-    h = GetStdHandle(STD_OUTPUT_HANDLE);//ä»æ ‡å‡†è®¾å¤‡è·å–å¥æŸ„
+    h = GetStdHandle(STD_OUTPUT_HANDLE);//´Ó±ê×¼Éè±¸»ñÈ¡¾ä±ú
     c.X = x;
     c.Y = y;
     SetConsoleCursorPosition(h, c);
 }
 
-int System::keyboard() {//1234---ä¸Šå·¦ä¸‹å³
+int System::keyboard() {//1234---ÉÏ×óÏÂÓÒ
     char c;
     int n = 0;
-    if (_kbhit()) {//æ£€æŸ¥æ˜¯å¦æœ‰é”®ç›˜è¾“å…¥
-        c = _getch();//å¦‚æœæœ‰,åˆ™è¿›è¡Œä¸€æ¬¡è¯»å–
+    if (_kbhit()) {//¼ì²éÊÇ·ñÓĞ¼üÅÌÊäÈë
+        c = _getch();//Èç¹ûÓĞ,Ôò½øĞĞÒ»´Î¶ÁÈ¡
         if (c == 'w' || c == 'W')
             n = 1;
         else if (c == 'a' || c == 'A')

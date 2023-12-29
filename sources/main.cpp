@@ -11,15 +11,15 @@
 using namespace std;
 
 int main() {
-//    ä¸»æ§åˆ¶å¾ªç¯ä½“
+//    Ö÷¿ØÖÆÑ­»·Ìå
     while (true) {
         GameControl game_controler(make_shared<Player>(1), make_shared<Player>(2),
                                    make_shared<Board>());
         Menu::print();
         if (Menu::choose() == 2)
             break;
-        game_controler.start();//æ¸¸æˆä¸»å¾ªç¯ä½“
-        game_controler.game_over();//ä¸€å±€æ¸¸æˆç»“æŸæ—¶è¿›è¡Œå¤„ç†
+        game_controler.start();//ÓÎÏ·Ö÷Ñ­»·Ìå
+        game_controler.game_over();//Ò»¾ÖÓÎÏ·½áÊøÊ±½øĞĞ´¦Àí
     }
 
     return 0;

@@ -8,19 +8,19 @@ using namespace std;
 
 void Menu::print() {
     system("cls");
-    System::gotoxy(28, 0);
-    cout << "äº”å­æ£‹" << endl;
+        System::gotoxy(28, 0);
+    cout << "Îå×ÓÆå" << endl;
     const char *select[8] = {
             "        _______________________________________________\n",
             "        |                                             |\n",
-            "        |        è¯·è¾“å…¥ç¼–å·:                          |\n",
-            "        |       1.å¼€å§‹æ¸¸æˆ     2.é€€å‡ºæ¸¸æˆ             |\n",
+            "        |        ÇëÊäÈë±àºÅ:                          |\n",
+            "        |       1.¿ªÊ¼ÓÎÏ·     2.ÍË³öÓÎÏ·             |\n",
             "        |                                             |\n",
             "        |                                             |\n",
             "        -----------------------------------------------\n",
-            "                    è¯·è¾“å…¥ç¼–å·[1/2]:[ ]"
+            "                    ÇëÊäÈë±àºÅ[1/2]:[ ]"
     };
-    for (auto &i: select) {//æ‰“å°èœå•
+    for (auto &i: select) {//´òÓ¡²Ëµ¥
         cout << i;
     }
 }
@@ -28,8 +28,8 @@ void Menu::print() {
 int Menu::choose() {
     char c;
     while (true) {
-        System::gotoxy(37, 8);//å®šä½åˆ°è¾“å…¥æ 
-        c = _getch();//vs2022è¦æ±‚å°†getch()æ›´æ¢ä¸º_getch()---æ ‡å‡†cç¼–è¯‘å™¨æ¢å›žgetch()(?)
+        System::gotoxy(37, 8);//¶¨Î»µ½ÊäÈëÀ¸
+        c = _getch();//vs2022ÒªÇó½«getch()¸ü»»Îª_getch()---±ê×¼c±àÒëÆ÷»»»Øgetch()(?)
         if (c == '1') {
             system("cls");
             return 1;
@@ -41,7 +41,7 @@ int Menu::choose() {
 
 void Menu::wrongInput() {
     System::gotoxy(39, 8);
-    printf("è¾“å…¥é”™è¯¯!");
+    printf("ÊäÈë´íÎó!");
     Sleep(1000);
     System::gotoxy(39, 8);
     cout << "         ";

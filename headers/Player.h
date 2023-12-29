@@ -9,9 +9,9 @@ class Player {
 public:
     Player(int s) : sente(s) {}
     void set_piece(Board&board);
-    int sente;//å…ˆåæ‰‹
+    int sente;//ÏÈºóÊÖ
 
-    //pair<int,int> decision();//ç”µè„‘ç©å®¶è¿›è¡Œå†³ç­–
+    //pair<int,int> decision();//µçÄÔÍæ¼Ò½øĞĞ¾ö²ß
 private:
 //    void move_coord(Board& board);
 };

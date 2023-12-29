@@ -14,4 +14,4 @@ void Player::set_piece(Board &board) {
     }
 }
 
-//pair<int,int> decision();//鐢佃剳鐜╁杩涜鍐崇瓥
+//pair<int,int> decision();//电脑玩家进行决策

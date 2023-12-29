@@ -17,7 +17,7 @@ void GameControl::start() {
     game_init();
     while (true) {
         System::gotoxy(board->maxcoord_x + 2, board->maxcoord_y / 2);
-        cout << "杞埌 player " << board->piece[player1->sente - 1] << " 钀藉瓙!";
+        cout << "轮到 player " << board->piece[player1->sente - 1] << " 落子!";
         player1->set_piece(*board);
         if (referee.judge(*board, 1)) {
             winner = 1;
@@ -25,7 +25,7 @@ void GameControl::start() {
         }
 
         System::gotoxy(board->maxcoord_x + 2, board->maxcoord_y / 2);
-        cout << "杞埌 player " << board->piece[player2->sente - 1] << " 钀藉瓙!";
+        cout << "轮到 player " << board->piece[player2->sente - 1] << " 落子!";
         player2->set_piece(*board);
         if (referee.judge(*board, 2)) {
             winner = 2;
@@ -41,12 +41,12 @@ void GameControl::game_over() {
     const char *endInterface[8] = {
             "        _______________________________________________\n",
             "        |                                             |\n",
-            "        |      娓告垙缁撴潫!                              |\n",
-            "        |      鐜╁ ",
-            " 鑾疯儨                            |\n",
+            "        |      游戏结束!                              |\n",
+            "        |      玩家 ",
+            " 获胜                            |\n",
             "        |                                             |\n",
             "        -----------------------------------------------\n",
-            "                    鎸夌┖鏍奸敭纭:[ ]"
+            "                    按空格键确认:[ ]"
     };
     for (int i = 0; i < 8; ++i) {
 //        System::color(i + 2);
@@ -56,5 +56,5 @@ void GameControl::game_over() {
     }
     System::gotoxy(34, 6);
     char c;
-    while (c = _getch() != ' ');//鍚屾牱绛夊緟杈撳叆
+    while (c = _getch() != ' ');//同样等待输入
 }

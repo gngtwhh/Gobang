@@ -12,43 +12,43 @@ Board::Board() : coords({{'x', 7 * 4},
 
 void Board::print_board() {
     static const char *board_strs[] = {
-            "â”â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”¯â”â”â”â”“",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”  â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¼ â€• â”¨",
-            "â”ƒ   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”‚   â”ƒ",
-            "â”—â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”·â”â”â”â”›"
+            "©³©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©Ó©¥©¥©¥©·",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©Ä ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©à ¨D ©Ì",
+            "©§   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©¦   ©§",
+            "©»©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©Û©¥©¥©¥©¿"
     };
-/*static const char *corners[4] = {"â”", "â”“", "â”—", "â”›"};//å·¦ä¸Š,å³ä¸Š,å·¦ä¸‹,å³ä¸‹
-static const char *crosses[5] = {"â” ", "â”¯", "â”¨", "â”·", "â”¼"};//å·¦,ä¸Š,å³,ä¸‹,ä¸­
-static const char *mid_edges[2] = {" â€• ", "â”‚"};//æ¨ª,ç«–
-static const char *edges[2] = {" â”â”", "â”ƒ"};//æ¨ª,ç«–
+/*static const char *corners[4] = {"©³", "©·", "©»", "©¿"};//×óÉÏ,ÓÒÉÏ,×óÏÂ,ÓÒÏÂ
+static const char *crosses[5] = {"©Ä", "©Ó", "©Ì", "©Û", "©à"};//×ó,ÉÏ,ÓÒ,ÏÂ,ÖÐ
+static const char *mid_edges[2] = {" ¨D ", "©¦"};//ºá,Êú
+static const char *edges[2] = {" ©¥©¥", "©§"};//ºá,Êú
 static const char *space = "   ";
 
-//ä¸Šè¾¹ç•Œ
+//ÉÏ±ß½ç
 cout << corners[0];
 for (int i = 0; i < 14; ++i) {
     cout<<edges[0] << (i != 13 ? crosses[1] : corners[1]);
@@ -61,7 +61,7 @@ for (int i = 0; i < 14; ++i) {
 }
 cout << endl;
 
-//ä¸­é—´
+//ÖÐ¼ä
 for (int i = 0; i < 13; ++i) {
     cout << crosses[0];
     for (int j = 0; j < 14; ++j)
@@ -74,17 +74,17 @@ for (int i = 0; i < 13; ++i) {
     cout << endl;
 }
 
-//ä¸‹è¾¹ç•Œ
+//ÏÂ±ß½ç
 cout << corners[2];
 for (int i = 0; i < 14; ++i) {
     cout<<edges[0] << (i != 13 ? crosses[3] : corners[3]);
 }
 cout << endl;*/
 
-//    ç›´æŽ¥æ‰“å°æ£‹ç›˜
+//    Ö±½Ó´òÓ¡ÆåÅÌ
     for (auto str: board_strs)
         cout << str << endl;
-//    æ‰“å°é»˜è®¤åæ ‡(7,7)
+//    ´òÓ¡Ä¬ÈÏ×ø±ê(7,7)
     print_cursor();
 }
 
@@ -98,20 +98,20 @@ void Board::move_coord(int direction) {
             {-4, 0},
             {0,  2},
             {4,  0}
-    };//ä¸Šå·¦ä¸‹å³
-    //æ£€æŸ¥ç§»åŠ¨çš„å¯è¡Œæ€§
+    };//ÉÏ×óÏÂÓÒ
+    //¼ì²éÒÆ¶¯µÄ¿ÉÐÐÐÔ
     if ((direction == 1 && coords['y'] == 0) || (direction == 2 && coords['x'] == 0) ||
         (direction == 3 && coords['y'] == maxcoord_y) || (direction == 4 && coords['x'] == maxcoord_x)) {
         return;
     }
-    //æ¸…é™¤ç”»æ¿ä¸Šçš„åŽŸå…‰æ ‡å­—ç¬¦
+    //Çå³ý»­°åÉÏµÄÔ­¹â±ê×Ö·û
     clear_cursor();
 
-    //ç§»åŠ¨ä¸­å¿ƒåæ ‡
+    //ÒÆ¶¯ÖÐÐÄ×ø±ê
     coords['x'] += cursor_move[direction - 1][0];
     coords['y'] += cursor_move[direction - 1][1];
 
-    //ç»˜åˆ¶æ–°çš„å…‰æ ‡å­—ç¬¦
+    //»æÖÆÐÂµÄ¹â±ê×Ö·û
     print_cursor();
 }
 
@@ -120,18 +120,18 @@ void Board::move_coord(int x, int y) {
 }
 
 bool Board::move_in_board(int who) {
-    //æ³¨æ„:recordçš„xå’Œyä¸Žcoordsçš„xå’Œyç›¸å
+    //×¢Òâ:recordµÄxºÍyÓëcoordsµÄxºÍyÏà·´
     if (!record[coords['y'] / 2][coords['x'] / 4]) {
         record[coords['y'] / 2][coords['x'] / 4] = who;
         System::gotoxy(coords['x'], coords['y']);
-        cout << piece[who - 1];//çŽ©å®¶ç¼–å·ä¸º1å’Œ2
+        cout << piece[who - 1];//Íæ¼Ò±àºÅÎª1ºÍ2
         return true;
     } else return false;
 }
 
 void Board::print_cursor() {
     //x+-2,y+-1
-    //ä¸Šå·¦ä¸‹å³
+    //ÉÏ×óÏÂÓÒ
     if (!(coords['x'] - 2 < 0 || coords['y'] - 1 < 0)) {
         System::gotoxy(coords['x'] - 2, coords['y'] - 1);
         cout << corners[0];
@@ -153,7 +153,7 @@ void Board::print_cursor() {
 
 void Board::clear_cursor() {
     //x+-2,y+-1
-    //ä¸Šå·¦ä¸‹å³
+    //ÉÏ×óÏÂÓÒ
     if (!(coords['x'] - 2 < 0 || coords['y'] - 1 < 0)) {
         System::gotoxy(coords['x'] - 2, coords['y'] - 1);
         cout << ' ';
@@ -173,7 +173,7 @@ void Board::clear_cursor() {
     }
 }
 
-std::pair<int, int> Board::last_position() {//å½“å‰çš„ä½ç½®å³ä¸ºæœ€åŽè½å­çš„åœ°æ–¹,å› ä¸ºè½å­åŽç«‹å³åˆ¤æ–­
-    //æ³¨æ„é¡ºåºå¯¹è°ƒ
+std::pair<int, int> Board::last_position() {//µ±Ç°µÄÎ»ÖÃ¼´Îª×îºóÂä×ÓµÄµØ·½,ÒòÎªÂä×ÓºóÁ¢¼´ÅÐ¶Ï
+    //×¢ÒâË³Ðò¶Ôµ÷
     return {coords['y'] / 2, coords['x'] / 4};
 }
